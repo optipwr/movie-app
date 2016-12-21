@@ -1,0 +1,29 @@
+.right-box{
+	width: 360px;
+	/* border: 1px solid black; */
+	float: left;
+	height: 430px;
+	margin-top: 20px;
+	margin-left: 20px;
+
+}
+
+.poster{
+	float: left;
+}
+
+.each-movie{
+	/* clear: both; */
+	margin: auto;
+}
+
+.carousel-inner{
+	width: 702px;
+	text-align: center;
+	margin: auto;
+	border: 1px solid black;
+}
+
+.poster img{
+	height: 450px;
+}

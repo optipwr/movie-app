@@ -17,13 +17,60 @@
 	margin: auto;
 }
 
+.carousel{
+	margin-top: 20px;
+}
+
 .carousel-inner{
 	width: 702px;
 	text-align: center;
 	margin: auto;
 	border: 1px solid black;
+	/* background-image: url('../images/inner-background.jpg'); */
+	/* background-color: green; */
 }
 
 .poster img{
 	height: 450px;
 }
+
+.item{
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+}
+
+.title{
+	font-size: 22px;
+}
+
+.second-title{
+	font-size: 22px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.title-header{
+	text-align: center;
+	font-size: 44px;
+	font-family: 'Julius Sans One', sans-serif;
+	/* color: white; */
+}
+
+body{
+	/* background-image: url('../images/lightgray.jpeg'); */
+}
+
+.movie-form{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.search-results img{
+	width: 20%;
+}
+
+.search-results{
+	margin: 20px;
+}
+

@@ -4,6 +4,8 @@
 	<title>Movie App</title>
 	<!-- BootStrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
 	<!-- Personal StyleSheet -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<!-- jQuery -->
@@ -19,15 +21,31 @@
 
 </head>
 <body>
+	<div id="wrapper">
+		<div class="title-header">
+			Currently Playing Movies
+		</div>
+	    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	        <div class="carousel-inner" role="listbox">
+	  	     <!-- jquery adding html here -->
+	        </div>
 
-        <div class="carousel-inner" role="listbox">
-  	     <!-- jquery adding html here -->
-        </div>
-
-    </div>
-
+	    </div>
+	    <div class="second-title">
+	    	Search For Any Movie Here!
+		    <form class="movie-form form-inline">
+				<label class="sr-only">TEST</label>
+				<div class="input-group">
+					<input type="text" class="form-control" id="movieSearch" placeholder="Search Movies">
+				</div>
+				<button type="submit" class="btn btn-primary">Search!</button>
+			</form>
+			<div class="search-results">
+				<!-- Content from ajax call here -->
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>

@@ -74,3 +74,18 @@ body{
 	margin: 20px;
 }
 
+.search-results img{
+	height: 300px;
+	width: 175px;
+	border: 1px solid black;
+	padding: 2px;
+	background-color: tan;
+}
+
+.searched-poster{
+	display: inline-block;
+}
+
+.searched-title, .searched-overview{
+	display: none;
+}

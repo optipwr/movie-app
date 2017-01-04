@@ -87,12 +87,18 @@ $(document).ready(function(){
     	event.preventDefault();
     	searchInput = $('#movieSearch').val();
     	var fullSearch = searchMovieUrl + searchInput;
+    	var searchedHTML = '';
     	$.getJSON(fullSearch, function(movieSearched){
     		console.log(movieSearched);
     		for(let i = 0; i < movieSearched.results.length; i++){
     			var posterSearched = imageBaseUrl + 'w300' + movieSearched.results[i].poster_path;
+    			var searchTitle = movieSearched.results[i].title;
+    			var searchDetails = movieSearched.results[i].overview;
+    			searchedHTML += '<div class="searched-poster"><img src="' + posterSearched + '"></div>';
+    			searchedHTML += '<div class="searched-title">Title: ' + searchTitle + '</div>';
+				searchedHTML += '<div class="searched-overview">Overview: ' + searchDetails + '</div>';
     			if(movieSearched.results[i].poster_path.length > 1){
-    				$('.search-results').append('<img src="' + posterSearched + '">');
+    				$('.search-results').html(searchedHTML);
     			}
     		}
     	})

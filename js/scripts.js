@@ -94,9 +94,12 @@ $(document).ready(function(){
     			var posterSearched = imageBaseUrl + 'w300' + movieSearched.results[i].poster_path;
     			var searchTitle = movieSearched.results[i].title;
     			var searchDetails = movieSearched.results[i].overview;
-    			searchedHTML += '<div class="searched-poster"><img src="' + posterSearched + '"></div>';
+                searchedHTML += '<button type="button" class="btn invisible-btn" data-toggle="modal" data-target="#exampleModalTV' + i + '" data-whatever="@' + i + '"><img src="' + posterSearched + '"></button>'
+                searchedHTML += '<div class="modal fade" id="exampleModalTV' + i + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"><div class="modal-dialog" role="document"><div class="modal-content">'
+    			// searchedHTML += '<div class="searched-poster"><img src="' + posterSearched + '"></div>';
     			searchedHTML += '<div class="searched-title">Title: ' + searchTitle + '</div>';
 				searchedHTML += '<div class="searched-overview">Overview: ' + searchDetails + '</div>';
+                searchedHTML += '</div></div></div>'
     			if(movieSearched.results[i].poster_path.length > 1){
     				$('.search-results').html(searchedHTML);
     			}

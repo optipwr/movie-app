@@ -1,3 +1,8 @@
+#wrapper{
+	width: 1200px;
+	margin: auto;
+}
+
 .right-box{
 	width: 360px;
 	/* border: 1px solid black; */
@@ -66,12 +71,12 @@ body{
 	margin-bottom: 10px;
 }
 
-.search-results img{
-	width: 20%;
-}
-
 .search-results{
 	margin: 20px;
+	width: 1060px;
+	margin: auto;
+	background-color: #C0C0C0;
+	border-radius: 1%;
 }
 
 .search-results img{
@@ -86,6 +91,24 @@ body{
 	display: inline-block;
 }
 
-.searched-title, .searched-overview{
-	display: none;
+.searched-title{
+	font-weight: bold;
+	color: orange;
+}
+
+.searched-overview{
+	font-size: 16px;
+}
+
+.modal-content {
+	/* style modal box here and possibly use !important */
+	padding: 8px;
+	border: 2px solid black;
+	font-family: 'Julius Sans One', sans-serif;
+	background-color: #555;
+	color: white;
+}
+
+.modal{
+	top: 300px;
 }

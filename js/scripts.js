@@ -19,14 +19,14 @@ $(document).ready(function(){
             	var detailUrl = apiBaseUrl + 'movie/' + targetMovieData.id + '?api_key=' + apiKey;
             	$.getJSON(detailUrl, function(detailData){
             		var releaseUrl = apiBaseUrl + 'movie/' + detailData.id + '/release_dates?api_key=' + apiKey    
-                        $.getJSON(releaseUrl, function(releaseData){
-                            var releaseDataArray = releaseData.results
-                            var mpaa = ""
-                            for(let i = 0; i<releaseData.results.length; i++){
-                                if(releaseData.results[i].iso_3166_1 === "US"){
-                                    mpaa = releaseData.results[i].release_dates[0].certification
-                            	}
-                        	}
+                        // $.getJSON(releaseUrl, function(releaseData){
+                            // var releaseDataArray = releaseData.results
+                         //    var mpaa = ""
+                         //    for(let i = 0; i<releaseData.results.length; i++){
+                         //        if(releaseData.results[i].iso_3166_1 === "US"){
+                         //            mpaa = releaseData.results[i].release_dates[0].certification
+                         //    	}
+                        	// }
 		            		var genre = '';
 		            		for(let i = 0; i < detailData.genres.length; i++){
 		            			if(i > 0){
@@ -53,7 +53,7 @@ $(document).ready(function(){
 				                nowPlayingHTML += '<div class="poster"><a href="' + youTubeLink + '"target="_blank"><img src="' + poster + '"></a></div>';
 				                nowPlayingHTML += '<div class="right-box">';
 				                    nowPlayingHTML += '<div class="title">Title: ' + nowPlayingData.results[i].title + '</div>';
-				                    nowPlayingHTML += '<div class="rating">Rating: ' + mpaa + '</div>';
+				                    // nowPlayingHTML += '<div class="rating">Rating: ' + mpaa + '</div>';
 				                    nowPlayingHTML += '<div class="overview">Overview: ' + nowPlayingData.results[i].overview + '</div>';
 				                    nowPlayingHTML += '<div class="release-date">Release Date: ' + nowPlayingData.results[i].release_date + '</div>';
 				                    nowPlayingHTML += '<div class="vote-average">Average Rating: ' + nowPlayingData.results[i].vote_average + '</div>';
@@ -74,7 +74,7 @@ $(document).ready(function(){
 						    <span class="sr-only">Next</span>
 						  	</a>`);
 						});
-	        	});
+	        	// });
             });
         }
     });

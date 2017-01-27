@@ -66,4 +66,5 @@ nowPlayingHTML += '</div>';            //item closing tag
 
 ##Screenshots:
 ---
-
+Overview of main page
+![alt text](https://github.com/optipwr/movie-app/blob/master/images/movie-app.png 'movie-app.png')
